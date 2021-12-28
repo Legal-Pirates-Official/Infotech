@@ -60,6 +60,7 @@
 	background-size: cover;
 	transition: all 0.5s ease-in-out;
 }
+
 .eh .content {
 	font-size: 25px;
 	text-align: justify;
@@ -78,6 +79,7 @@
 	height: 30%;
 	text-align: justify;
 	background: linear-gradient(45deg, #0081cf, #008e9b, #00c9a7);
+	/* background: #fff; */
 	padding: 50px;
 	color: #fff;
 	border-radius: 8px;
@@ -90,10 +92,9 @@
 	height: 70%;
 	background-position: top;
 	background-repeat: none;
-}
-.layout:hover {
 	width: 100%;
 }
+
 .layout:hover .content {
 	width: 100%;
 	height: 100%;
@@ -110,3 +111,42 @@
 		height: 80%;
 	}
 }
+
+@media (max-width: 768px) {
+	.heading2 {
+		padding-top: 30px;
+	}
+	.layout
+	{
+		width: 95%;
+		height: 50%;
+		margin: 30px;
+	}
+	.pt .content
+	{
+		background: transparent;
+		color: #000;
+		box-shadow: none;
+		padding: 15px;
+		letter-spacing: -1px;
+	}
+	.eh .content
+	{
+		background: transparent;
+		color: #000;
+		box-shadow: none;
+		padding: 15px;
+		letter-spacing: -1px;
+	}
+	.layout:hover
+	{
+		overflow: scroll;
+		height: 50vh;
+		width: 98%;
+		background: rgb(255, 255, 255);
+		color: #000;
+		box-shadow: none;
+		letter-spacing: 0;
+	}
+}
+
