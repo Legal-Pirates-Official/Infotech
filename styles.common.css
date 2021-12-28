@@ -163,4 +163,7 @@ footer {
 		border-left: 0;
 		border-right: 0;
 	}
+	.nav-link:nth-child(3) {
+		display: block;
+	}
 }
