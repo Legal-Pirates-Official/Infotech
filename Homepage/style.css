@@ -8,16 +8,12 @@
 	font-family: 'Poppins', sans-serif;
 }
 
-.nav-container {
-	background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
-}
-
 .news-dropdown {
 	background-color: rgba(255, 255, 255, 0.5);
 }
 
 .hero {
-	background: linear-gradient(300deg, #00f260, #0575e6);;
+	background: linear-gradient(300deg, #00f260, #0575e6);
 	/* background: linear-gradient(200deg, #59c173, #a17fe0, #5d26c1); */
 	background-position: bottom left;
 	height: 100vh;
@@ -117,16 +113,29 @@
 
 .main .aboutus {
 	position: relative;
-	left: 180px;
-	width: 25%;
+	width: 100px;
+}
+
+.main > div {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	display: flex;
+	width: 60%;
+	justify-content: space-around;
 }
 
 .main a {
 	text-decoration: none;
 	transform: scale(1);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	transition: all 0.5s ease-in-out;
+	position: relative;
 }
-
 
 .main a:hover {
 	transform: scale(1.2);
@@ -180,15 +189,16 @@
 	height: 85%;
 	width: 85%;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
+	/* grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr; */
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-row-gap: 7%;
 	grid-column-gap: 4%;
 }
 
 .gridfr {
 	position: relative;
-	height: 100%;
+	height: 200px;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -460,16 +470,56 @@ footer {
 		width: 515px;
 	}
 
-	.main .aboutus {
-		left: 140px;
-		width: 35%;
-	}
-	
 	.button {
 		padding: 12px 20px;
 	}
 
 	.navlink-container {
 		width: 50%;
+	}
+
+	.section3 {
+		height: 130vh;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.main > div {
+		width: 80%;
+	}
+
+	.section3 {
+		height: 130vh;
+	}
+
+	.grid {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+
+	.hero :first-child {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.section3 {
+		height: 250vh;
+	}
+	.grid {
+		grid-row-gap: 40px;
+	}
+	.name,
+	.name-backdrop {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.Words {
+		width: 90vw;
+	}
+	.name-backdrop {
+		font-size: 75vw;
+		right: auto;
 	}
 }

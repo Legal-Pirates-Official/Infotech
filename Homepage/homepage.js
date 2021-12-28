@@ -16,7 +16,6 @@ const grids = [grid1, grid2, grid3, grid4, grid5, grid6];
 const menu = document.querySelector('.menu');
 const nav_container = document.querySelector('.nav-container');
 let menuopen = false;
-
 const parallax = (args, e) => {
 	args.forEach((arg) => {
 		let speed = arg.getAttribute('data-speed');
@@ -26,11 +25,14 @@ const parallax = (args, e) => {
 	});
 };
 hero.addEventListener('mousemove', (e) => {
-	parallax(layers, e);
-	parallax(words, e);
-	const x = (e.pageX * 1) / 100;
-	const y = (e.pageY * 1) / 100;
-	IT.style.transform = `translateX(${x}px) translateY(${y}px) scale(14)`;
+	if (window.innerWidth <= 500) {
+		arg.setAttribute('data-speed', 0);
+		parallax(layers, e);
+		parallax(words, e);
+		const x = (e.pageX * 1) / 100;
+		const y = (e.pageY * 1) / 100;
+		IT.style.transform = `translateX(${x}px) translateY(${y}px) scale(14)`;
+	}
 });
 
 function gridsystem(n) {

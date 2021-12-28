@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap');
+
 * {
 	user-select: none;
 }
@@ -9,7 +11,8 @@
 	height: 4rem;
 	display: flex;
 	justify-content: center;
-	background: whitesmoke;
+	background: #f6f0fb;
+	box-shadow: 0 -3px 16px black;
 	position: fixed;
 	z-index: 20;
 	transition: all 0.3s ease-in-out;
@@ -24,6 +27,23 @@
 	font-weight: 500;
 	font-size: large;
 	background-color: inherit;
+}
+
+.navbar > span {
+	font-family: 'Cinzel', serif;
+	font-weight: 700;
+	font-size: 1.8rem;
+	color: #ff9b49;
+	text-shadow: 2px 1px 3px black;
+}
+
+.navbar > .ham {
+	width: 2rem;
+	display: none;
+}
+
+.ham.open + .navlink-container {
+	transform: translateY(0);
 }
 
 .navlink-container {
@@ -55,6 +75,14 @@
 	position: relative;
 	align-items: center;
 	height: 4rem;
+}
+
+.nav-link a {
+	transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover a {
+	border-bottom: 2px solid black;
 }
 
 .news-li:hover .news-dropdown {
@@ -109,4 +137,30 @@ footer {
 .lp_logo {
 	width: 8%;
 	opacity: 0.6;
+}
+
+@media screen and (max-width: 500px) {
+	.navlink-container {
+		position: absolute;
+		width: 100% !important;
+		flex-direction: column;
+		top: 100%;
+		background: #f6f0fb;
+		left: 0;
+		transform: translateY(-200%);
+		transition: all 0.3s ease-in-out;
+		z-index: -1;
+	}
+
+	.navlink-container .nav-link {
+		margin: 0.5rem 0;
+		padding: 0.5rem 0;
+		width: 100%;
+		text-align: center;
+	}
+	.navlink-container .nav-link:nth-of-type(even) {
+		border: 2px solid rgba(0, 0, 0, 0.315);
+		border-left: 0;
+		border-right: 0;
+	}
 }
