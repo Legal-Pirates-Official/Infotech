@@ -8,13 +8,6 @@
 	font-family: 'Poppins', sans-serif;
 }
 
-.nav-container {
-	background: linear-gradient(
-		rgba(255, 255, 255, 0.5),
-		rgba(255, 255, 255, 0.1)
-	);
-}
-
 .news-dropdown {
 	background-color: rgba(255, 255, 255, 0.5);
 }
@@ -446,7 +439,6 @@ footer {
 		left: 75px;
 		width: 450px;
 	}
-	
 
 	.layer1 {
 		top: 130px;
@@ -515,5 +507,19 @@ footer {
 	}
 	.grid {
 		grid-row-gap: 40px;
+	}
+	.name,
+	.name-backdrop {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.Words {
+		width: 90vw;
+	}
+	.name-backdrop {
+		font-size: 75vw;
+		right: auto;
 	}
 }
