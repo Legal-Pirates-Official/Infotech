@@ -11,7 +11,7 @@
 	height: 4rem;
 	display: flex;
 	justify-content: center;
-	background: #f6f0fb;
+	background: #ffffff93;
 	box-shadow: 0 -3px 16px black;
 	position: fixed;
 	z-index: 20;
@@ -26,7 +26,7 @@
 	align-items: center;
 	font-weight: 500;
 	font-size: large;
-	background-color: inherit;
+	/* background-color: inherit; */
 }
 
 .navbar > span {
